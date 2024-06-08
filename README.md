@@ -935,6 +935,17 @@ c402cbb6f68b   bluenet   bridge    local
 [Network address for bluenet is 172.18.0.1, while rednet is 172.19.0.1]
 
 5. Using the command ```docker exec c1 ping c2```, which basically issue a ping from container c1 to c2. Are you able to ping? Show your output . ***(1 mark)***
+```bash
+@bdytnnjh ➜ /workspaces/NatSysProject (main) $ docker exec c1 ping -c 4 c2
+64 bytes from 172.19.0.1: seq=0 ttl=64 time=0.090 ms
+64 bytes from 172.19.0.1: seq=1 ttl=64 time=0.084 ms
+64 bytes from 172.19.0.1: seq=2 ttl=64 time=0.087 ms
+64 bytes from 172.19.0.1: seq=3 ttl=64 time=0.076 ms
+
+--- c2 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 0.076/0.084/0.090 ms
+```
 
 ## Bridging two SUB Networks
 1. Let's try this again by creating a network to bridge the two containers in the two subnetworks
