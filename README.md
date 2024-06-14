@@ -365,15 +365,19 @@ ls -asl: lists all files (even hidden ones), as well as their sizes in blocks an
 ```
 15. What is the TLB size of the Virtual CPU. ***(1 mark)*** 
 ```bash
-
+@bdytnnjh ➜ /workspaces/NatSysProject (main) $ cat /proc/cpuinfo | grep -i "tlb"
+TLB size        : 2560 4K pages
+TLB size        : 2560 4K pages
 ```
 16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** 
 ```bash
-
+@bdytnnjh ➜ /workspaces/NatSysProject (main) $ lscpu | grep "CPU MHz"
+CPU MHz:                            3124.426
 ```
 17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** 
 ```bash
-
+@bdytnnjh ➜ /workspaces/NatSysProject (main) $ top -b -n 1 | head -n 12 | tail -n 1
+    413 codespa+  20   0    2616   1408   1408 S   0.0   0.0   0:00.01 sh
 ```
 
 ## Running your own container instance.
